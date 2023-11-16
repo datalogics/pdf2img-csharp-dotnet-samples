@@ -12,7 +12,7 @@ using (PDF2IMG pdf2img = new PDF2IMG())
     ImageConversionOptions options = new ImageConversionOptions();
     options.OutputType = OutputType.JPEG;
 
-    uint numPages = pdf2img.LoadInput("input.pdf");
+    uint numPages = pdf2img.LoadInput("../Sample_Input/input.pdf");
 
     pdf2img.SetImageConversionOptions(options);
 
