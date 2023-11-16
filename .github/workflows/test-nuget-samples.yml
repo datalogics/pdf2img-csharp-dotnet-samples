@@ -23,3 +23,6 @@ jobs:
             - name: Build samples
               working-directory: ${{ matrix.dir }}
               run: dotnet build --configuration Release
+            - name: Run samples
+              working-directory: ${{ matrix.dir }}
+              run: dotnet run --configuration Release
