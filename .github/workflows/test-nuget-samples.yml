@@ -11,6 +11,8 @@ env:
 jobs:
     build-and-run-samples:
         runs-on: windows-2022
+        strategy:
+          matrix: { dir: ['ConvertToJpg'] }
         steps:
             - name: Checkout
               uses: actions/checkout@v3
@@ -18,3 +20,6 @@ jobs:
               uses: actions/setup-dotnet@v3
               with:
                 dotnet-version: ${{ env.DOTNET_VERSION }}
+            - name: Build samples
+              working-directory: ${{ matrix.dir }}
+              run: dotnet build --configuration Release
