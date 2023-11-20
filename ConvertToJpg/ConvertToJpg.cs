@@ -16,5 +16,5 @@ using (PDF2IMG pdf2img = new PDF2IMG())
 
     pdf2img.SetImageConversionOptions(options);
 
-    pdf2img.ConvertPageToImage(1, "output.jpg");
+    pdf2img.ConvertPageToImage(1, "ConvertToJpg-output.jpg");
 }
