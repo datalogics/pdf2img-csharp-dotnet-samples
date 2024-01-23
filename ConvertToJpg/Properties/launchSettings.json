@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConvertToJpg": {
+      "commandName": "Project",
+      "workingDirectory": "."
+    }
+  }
+}
