@@ -10,6 +10,7 @@ PDF2IMG enables users to convert PDF documents to image files, such as JPEG, PNG
 ## ***Building and Running Samples***
 Samples can be built and run easily in an IDE such as Visual Studio 2022.
 
-1. Open the sample .csproj file in Visual Studio 2022.
-2. Install the PDF2IMG.LM.NET NuGet package with Visual Studio. You can do this by navigating to Tools > NuGet Package Manager > Manage NuGet Packages for Solution. Then, search for the PDF2IMG.LM.NET package and install.
-3. Run the sample with Visual Studio.
+1. Open the sample's .csproj file in Visual Studio 2022.
+2. Install the **PDF2IMG.LM.NET** NuGet package with Visual Studio. You can do this by navigating to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**. Then, search for the **PDF2IMG.LM.NET** package and install.
+3. Obtain a license activation key from our website: https://www.datalogics.com/convert-pdfs-to-images. Click on the **Free Trial** button and fill out the form to get your activation key.
+4. Run the sample with Visual Studio. You will get a prompt to enter the activation key you obtained in the previous step.
