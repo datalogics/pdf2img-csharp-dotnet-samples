@@ -6,7 +6,7 @@ on:
         branches: [ develop ]
 
 env:
-    DOTNET_VERSION: '6.x'
+    DOTNET_VERSION: '8.x'
 
 jobs:
     build-and-run-samples:
@@ -30,7 +30,7 @@ jobs:
               run: |
                 ls ${{matrix.dir}}
             - name: Save artifacts
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                 name: sample-output
                 path: |
