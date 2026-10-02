@@ -24,8 +24,11 @@ jobs:
               working-directory: ${{ matrix.dir }}
               run: dotnet build --configuration Release
             - name: Run samples
+              if: steps.key.outputs.present == 'true'
               working-directory: ${{ matrix.dir }}
-              run: dotnet run --configuration Release
+              env:
+                ACTIVATION_KEY: ${{ secrets.PDF2IMG_ACTIVATION_KEY }}
+              run: $env:ACTIVATION_KEY | dotnet run --configuration Release
             - name: List files
               run: |
                 ls ${{matrix.dir}}
