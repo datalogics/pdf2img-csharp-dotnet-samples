@@ -23,6 +23,13 @@ jobs:
             - name: Build samples
               working-directory: ${{ matrix.dir }}
               run: dotnet build --configuration Release
+            - name: Check for activation key
+              id: key
+              env:
+                ACTIVATION_KEY: ${{ secrets.PDF2IMG_ACTIVATION_KEY }}
+              run: |
+                if ($env:ACTIVATION_KEY) { $present = "true" } else { $present = "false" }
+                "present=$present" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
             - name: Run samples
               if: steps.key.outputs.present == 'true'
               working-directory: ${{ matrix.dir }}
